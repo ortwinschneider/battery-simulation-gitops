@@ -4,6 +4,7 @@ kind: OperatorGroup
 metadata:
   name: og-battery-simulation
   namespace: battery-simulation
+  argocd.argoproj.io/sync-wave: "0"
 spec:
   targetNamespaces:
     - battery-simulation

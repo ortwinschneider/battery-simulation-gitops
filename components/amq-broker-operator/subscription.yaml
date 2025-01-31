@@ -5,7 +5,7 @@ metadata:
   namespace: battery-simulation
 spec:
   channel: 7.12.x
-  installPlanApproval: Manual
+  installPlanApproval: Automatic
   name: amq-broker-rhel8
   source: redhat-operators
   sourceNamespace: openshift-marketplace

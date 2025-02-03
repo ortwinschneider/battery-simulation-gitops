@@ -5,4 +5,12 @@ resources:
 - ./namespace.yaml
 - ../../components
 
+patches:
+ - target:
+      group: operators.coreos.com
+      version: v1
+      kind: OperatorGroup
+      name: og-battery-simulation
+   path: og-patch.yaml
+
 namespace: battery-demo

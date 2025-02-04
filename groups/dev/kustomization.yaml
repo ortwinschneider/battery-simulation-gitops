@@ -5,6 +5,8 @@ resources:
 - ./namespace.yaml
 - ../../components
 
+namespace: battery-demo
+
 patches:
  - target:
       group: operators.coreos.com
@@ -21,5 +23,16 @@ patches:
     - op: replace
       path: /spec/template/spec/containers/0/env/0/value
       value: 'tcp://mqtt-broker-all-0-svc.battery-demo.svc.cluster.local:61616' 
+ - target:
+    group: apps
+    version: v1
+    kind: Deployment
+    name: data-ingester-jvm
+   patch: |-
+    - op: replace
+      path: /spec/template/spec/containers/0/env/0/value
+      value: 'https://influxdb-battery-demo.apps.ocp4.rhlab.de'
+    - op: replace
+      path: /spec/template/spec/containers/0/env/2/value
+      value: 'mqtt-broker-all-0-svc.battery-demo.svc.cluster.local'    
 
-namespace: battery-demo

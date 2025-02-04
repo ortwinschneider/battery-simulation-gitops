@@ -19,6 +19,19 @@ spec:
             containers:
               - image: influxdb:2.0.6
                 name: influxdb
+                env:
+                - name: DOCKER_INFLUXDB_INIT_MODE
+                  value: setup
+                - name: DOCKER_INFLUXDB_INIT_USERNAME
+                  value: admin
+                - name: DOCKER_INFLUXDB_INIT_PASSWORD
+                  value: admin
+                - name: DOCKER_INFLUXDB_INIT_ORG
+                  value: redhat
+                - name: DOCKER_INFLUXDB_INIT_BUCKET
+                  value: bms
+                - name: DOCKER_INFLUXDB_INIT_ADMIN_TOKEN
+                  value: admin_token      
                 ports:
                   - containerPort: 8086
                     name: influxdb

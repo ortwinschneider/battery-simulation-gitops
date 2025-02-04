@@ -6,3 +6,4 @@ resources:
 - amq-broker
 - influxdb
 - battery-simulator
+- data-ingester

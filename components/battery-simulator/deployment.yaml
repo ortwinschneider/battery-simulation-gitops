@@ -33,7 +33,7 @@ spec:
               protocol: TCP
           env:
             - name: mqtt.broker.url
-              value: 'tcp://mqtt-broker-all-0-svc.battery-simulation.svc.cluster.local:61616'
+              value: 'tcp://mqtt-broker-all-0-svc.namespace.svc.cluster.local:61616'
             - name: mqtt.topic
               value: /ev/bms/
           resources: {}

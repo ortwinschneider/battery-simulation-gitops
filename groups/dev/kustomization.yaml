@@ -12,5 +12,14 @@ patches:
       kind: OperatorGroup
       name: og-battery-simulation
    path: og-patch.yaml
+ - target:
+    group: apps
+    version: v1
+    kind: Deployment
+    name: battery-simulation
+   patch: |-
+    - op: replace
+      path: /spec/template/spec/containers/0/env/0/value
+      value: 'tcp://mqtt-broker-all-0-svc.battery-demo.svc.cluster.local:61616' 
 
 namespace: battery-demo

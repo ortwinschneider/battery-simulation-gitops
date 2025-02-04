@@ -13,7 +13,7 @@ metadata:
     app.kubernetes.io/part-of: battery-simulation
     app.openshift.io/runtime: quarkus
 spec:
-  replicas: 0
+  replicas: 1
   selector:
     matchLabels:
       app: battery-simulation

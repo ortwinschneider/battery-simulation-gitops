@@ -25,7 +25,7 @@ spec:
                 - name: DOCKER_INFLUXDB_INIT_USERNAME
                   value: admin
                 - name: DOCKER_INFLUXDB_INIT_PASSWORD
-                  value: admin
+                  value: password
                 - name: DOCKER_INFLUXDB_INIT_ORG
                   value: redhat
                 - name: DOCKER_INFLUXDB_INIT_BUCKET

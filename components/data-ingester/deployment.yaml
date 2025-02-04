@@ -30,7 +30,7 @@ spec:
               protocol: TCP
           env:
             - name: influxdb.url
-              value: 'https://influxdb-namespace.apps.domain'
+              value: 'http://influxdb.namespace.svc.cluster.local:8086'
             - name: influxdb.token
               value: admin_token
             - name: mp.messaging.incoming.metrics.host

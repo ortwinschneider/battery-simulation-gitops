@@ -3,7 +3,8 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
     labels:
-        app: influxdb
+      app: influxdb
+      app.kubernetes.io/part-of: data-store
     name: influxdb
 spec:
     replicas: 1

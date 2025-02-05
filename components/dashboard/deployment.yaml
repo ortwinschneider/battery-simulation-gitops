@@ -15,9 +15,10 @@ spec:
     matchLabels:
       app: bms-dashboard
   template:
-    labels:
-      app: bms-dashboard
-      deployment: bms-dashboard
+    metadata:
+      labels:
+        app: bms-dashboard
+        deployment: bms-dashboard
     spec:
       containers:
         - name: bms-dashboard

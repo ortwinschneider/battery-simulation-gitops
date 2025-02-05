@@ -7,3 +7,4 @@ resources:
 - influxdb
 - battery-simulator
 - data-ingester
+- dashboard

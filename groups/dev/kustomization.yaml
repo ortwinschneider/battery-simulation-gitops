@@ -7,6 +7,12 @@ resources:
 
 namespace: battery-demo
 
+configMapGenerator:
+- name: bms-dashboard-config
+  behavior: merge
+  files:
+  - files/config.json
+
 patches:
  - target:
       group: operators.coreos.com

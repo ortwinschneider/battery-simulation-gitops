@@ -7,6 +7,7 @@
 - Battery simulator: Simulates the battery of a driving Tesla S. The BMS is sending telemetry data to the MQTT broker.
 - InfluxDB: Time series database, configured with auto setup
 - data-ingester: Quarkus component that reads data from MQTT and stores it InfluxDB
+- BMS Dashboard: Angular component that displays the battery telemetry data in realtime and serves as a frontend for a GenAI chatbot.
 
 ## Installation
 

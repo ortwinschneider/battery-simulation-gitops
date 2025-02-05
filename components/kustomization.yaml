@@ -8,3 +8,4 @@ resources:
 - battery-simulator
 - data-ingester
 - dashboard
+- mqtt2ws
